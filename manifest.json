@@ -13,5 +13,14 @@
     "declarativeContent",
     "storage"
   ],
-  "action": {}
+  "action": {
+    "default_popup": "ui/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"],
+      "all_frames": true
+    }
+  ]
 }
