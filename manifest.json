@@ -5,7 +5,13 @@
   "background": {
     "service_worker": "./background.js"
   },
-  "action": {
-    "default_popup": "ui/index.html"
-  }
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting",
+    "contextMenus",
+    "declarativeContent",
+    "storage"
+  ],
+  "action": {}
 }

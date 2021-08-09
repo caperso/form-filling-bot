@@ -1,4 +1,4 @@
-function fillForm() {
+export default function fillForm() {
   const data = {
     name: "John Doe",
     age: 32,
@@ -15,10 +15,3 @@ function fillForm() {
   document.querySelector(`[${prefix}-id="country"]`).value = data.country;
   document.querySelector(`[${prefix}-id="phone"]`).value = data.phone;
 }
-
-chrome.action.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: fillForm,
-  });
-});
