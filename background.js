@@ -1,26 +1,27 @@
-// chrome.runtime.onInstalled.addListener(service);
-
-// const rule = {
-//   condition: [
-//     new chrome.declarativeContent.PageStateMatcher({
-//       pageUrl: { hostContains: "localhost" },
-//     }),
-//   ],
-//   action: [new chrome.declarativeContent.showPageAction()],
-// };
-
-// function service() {
-//   chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
-//     chrome.declarativeContent.onPageChanged.addRules([rule]);
-//   });
-// }
-function reddenPage() {
-  document.body.style.backgroundColor = "red";
-}
-
-chrome.action.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: reddenPage,
+chrome.runtime.onInstalled.addListener(function () {
+  // popup welcome website
+  chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
+    chrome.declarativeContent.onPageChanged.addRules([
+      // set rules: when to show to action page, when to run something
+      {
+        conditions: [
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { hostContains: "csb" },
+          }),
+        ],
+        actions: [new chrome.declarativeContent.ShowPageAction()],
+      },
+    ]);
   });
 });
+
+
+// connect the server
+
+// push the notification
+
+// communicate the web via postMessage 
+
+// onUninstall:  popup feedback website
+
+// better offline experience
