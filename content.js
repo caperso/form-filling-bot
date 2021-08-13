@@ -30,4 +30,4 @@ window.addEventListener(
   false
 );
 
-console.log("Extension loaded", this);
+console.log("Form Filling Bot Extension Loaded", this);
