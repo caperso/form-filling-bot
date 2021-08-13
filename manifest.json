@@ -14,13 +14,20 @@
     "storage"
   ],
   "action": {
-    "default_popup": "ui/index.html"
+    "default_popup": "src/ui/index.html"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
       "all_frames": true
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["src/js/*"],
+      "matches": ["<all_urls>"]
     }
   ]
 }

@@ -1,4 +1,4 @@
-import * as $ from "./third-party/jquery";
+import * as $ from "../third-party/jquery";
 
 function fillForm() {
   console.log(123123);
