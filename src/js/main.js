@@ -2,7 +2,6 @@ import subChannel from "./sub-channel.js";
 import fillForm from "./form-filling.js";
 
 export function main() {
-  console.log("Hello you are welcome here");
   subChannel();
 
   window.addEventListener(

@@ -10,11 +10,11 @@ const fillForm = () => {
   };
   const prefix = "data-form";
 
-  $(`[${prefix}-id="name"]`)[0].value = data.name;
-  $(`[${prefix}-id="age"]`)[0].value = data.age;
-  $(`[${prefix}-id="address"]`)[0].value = data.address;
-  $(`[${prefix}-id="country"]`)[0].value = data.country;
-  $(`[${prefix}-id="phone"]`)[0].value = data.phone;
+  $(`[${prefix}-id="name"]`)[0]?.value = data.name;
+  $(`[${prefix}-id="age"]`)[0]?.value = data.age;
+  $(`[${prefix}-id="address"]`)[0]?.value = data.address;
+  $(`[${prefix}-id="country"]`)[0]?.value = data.country;
+  $(`[${prefix}-id="phone"]`)[0]?.value = data.phone;
 };
 
 export default fillForm;
