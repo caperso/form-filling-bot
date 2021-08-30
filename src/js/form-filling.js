@@ -1,5 +1,10 @@
 import "./third-party/jquery.min.js";
 
+function putElementValue(target, value) {
+  const prefix = "data-form-id";
+  $(`[${prefix}="${target}"]`)[0].value = value;
+}
+
 const fillForm = () => {
   const data = {
     name: "John Doe",
@@ -8,13 +13,12 @@ const fillForm = () => {
     country: "Iceland",
     phone: "+1426855510",
   };
-  const prefix = "data-form";
 
-  $(`[${prefix}-id="name"]`)[0]?.value = data.name;
-  $(`[${prefix}-id="age"]`)[0]?.value = data.age;
-  $(`[${prefix}-id="address"]`)[0]?.value = data.address;
-  $(`[${prefix}-id="country"]`)[0]?.value = data.country;
-  $(`[${prefix}-id="phone"]`)[0]?.value = data.phone;
+  putElementValue("name", data.name);
+  putElementValue("age", data.age);
+  putElementValue("address", data.address);
+  putElementValue("country", data.country);
+  putElementValue("phone", data.phone);
 };
 
 export default fillForm;
