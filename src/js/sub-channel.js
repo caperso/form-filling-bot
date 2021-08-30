@@ -1,3 +1,1 @@
-export default function subChannel() {
-  // console.log("Sub-channel loaded");
-}
+export default function subChannel() {}

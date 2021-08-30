@@ -9,8 +9,6 @@ async function getCurrentTab() {
 button.addEventListener("click", async () => {
   const tab = await getCurrentTab();
 
-  console.log(tab);
-
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
     function: () => {
