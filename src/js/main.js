@@ -10,7 +10,6 @@ export function main() {
       if (event.source != window) return;
 
       if (event.data.type && event.data.type == "FILL_FORM") {
-        console.log({...event.data});
         return fillForm();
       }
     },

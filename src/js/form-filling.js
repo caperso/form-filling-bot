@@ -2,7 +2,8 @@ import "./third-party/jquery.min.js";
 
 function putElementValue(target, value) {
   const prefix = "data-form-id";
-  $(`[${prefix}="${target}"]`)[0].value = value;
+  const element = $(`[${prefix}="${target}"]`)[0];
+  if (element && element.value !== undefined) element.value = value;
 }
 
 const fillForm = () => {
