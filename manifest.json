@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "./background.js"
+    "service_worker": "dist/serviceWorker"
   },
   "permissions": [
     "activeTab",
@@ -15,12 +15,10 @@
     "cookies",
     "browsingData"
   ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
+  "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "src/ui/index.html",
-    "default_icon": "src/assets/icon.png"
+    "default_icon": "static/icon/icecream.png"
   },
   "content_scripts": [
     {
